@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int steps;
+    float time;
+
+    printf("Enter number of steps taken: ");
+    scanf("%d", &steps);
+
+    printf("Enter time taken (in minutes): ");
+    scanf("%f", &time);
+
+    if (steps <= 0 || time <= 0) {
+        printf("Invalid input! Steps and time must be positive values.");
+        return 0;
+    }
+
+    // Categorizing fitness level
+    if (steps >= 10000 && time <= 60) {
+        printf("Fitness Level: Excellent");
+    }
+    else if (steps >= 8000 && time <= 90) {
+        printf("Fitness Level: Very Good");
+    }
+    else if (steps >= 6000) {
+        printf("Fitness Level: Good");
+    }
+    else if (steps >= 4000) {
+        printf("Fitness Level: Average");
+    }
+    else {
+        printf("Fitness Level: Needs Improvement");
+    }
+
+    return 0;
+}
