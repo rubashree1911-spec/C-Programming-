@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main() {
+    int month;
+
+    printf("Enter month number (1-12): ");
+    scanf("%d", &month);
+
+    // Checking valid month
+    if (month < 1 || month > 12) {
+        printf("Invalid month number!");
+        return 0;
+    }
+
+    // Printing number of days
+    switch(month) {
+        case 1:
+            printf("Month: January\nDays: 31\n");
+            break;
+        case 2:
+            printf("Month: February\nDays: 28 or 29 (Leap Year)\n");
+            break;
+        case 3:
+            printf("Month: March\nDays: 31\n");
+            break;
+        case 4:
+            printf("Month: April\nDays: 30\n");
+            break;
+        case 5:
+            printf("Month: May\nDays: 31\n");
+            break;
+        case 6:
+            printf("Month: June\nDays: 30\n");
+            break;
+        case 7:
+            printf("Month: July\nDays: 31\n");
+            break;
+        case 8:
+            printf("Month: August\nDays: 31\n");
+            break;
+        case 9:
+            printf("Month: September\nDays: 30\n");
+            break;
+        case 10:
+            printf("Month: October\nDays: 31\n");
+            break;
+        case 11:
+            printf("Month: November\nDays: 30\n");
+            break;
+        case 12:
+            printf("Month: December\nDays: 31\n");
+            break;
+    }
+
+    // Determining quadrant
+    if (month >= 1 && month <= 3)
+        printf("Quadrant: 1st Quadrant (Jan - Mar)");
+    else if (month >= 4 && month <= 6)
+        printf("Quadrant: 2nd Quadrant (Apr - Jun)");
+    else if (month >= 7 && month <= 9)
+        printf("Quadrant: 3rd Quadrant (Jul - Sep)");
+    else
+        printf("Quadrant: 4th Quadrant (Oct - Dec)");
+
+    return 0;
+}
