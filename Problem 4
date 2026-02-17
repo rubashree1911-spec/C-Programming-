@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int day;
+
+    printf("Enter a number (1-7): ");
+    scanf("%d", &day);
+
+    if (day < 1 || day > 7) {
+        printf("Invalid input! Please enter a number between 1 and 7.");
+        return 0;
+    }
+
+    switch(day) {
+        case 1:
+            printf("Day: Sunday\n");
+            printf("It is a Holiday (Weekend).");
+            break;
+        case 2:
+            printf("Day: Monday\n");
+            printf("It is a Weekday.");
+            break;
+        case 3:
+            printf("Day: Tuesday\n");
+            printf("It is a Weekday.");
+            break;
+        case 4:
+            printf("Day: Wednesday\n");
+            printf("It is a Weekday.");
+            break;
+        case 5:
+            printf("Day: Thursday\n");
+            printf("It is a Weekday.");
+            break;
+        case 6:
+            printf("Day: Friday\n");
+            printf("It is a Weekday.");
+            break;
+        case 7:
+            printf("Day: Saturday\n");
+            printf("It is a Holiday (Weekend).");
+            break;
+    }
+
+    return 0;
+}
