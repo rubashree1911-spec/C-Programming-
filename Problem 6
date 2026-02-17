@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+    int hours;
+    char gender;
+    float salary = 0;
+
+    printf("Enter number of hours worked in a week: ");
+    scanf("%d", &hours);
+
+    printf("Enter gender (M for Male / F for Female): ");
+    scanf(" %c", &gender);   // space before %c to avoid input error
+
+    if (hours <= 0) {
+        printf("Invalid number of hours!");
+        return 0;
+    }
+
+    // For first 8 hours
+    if (hours <= 8) {
+        if (gender == 'M' || gender == 'm') {
+            salary = hours * 80;
+        }
+        else if (gender == 'F' || gender == 'f') {
+            salary = hours * 60;
+        }
+        else {
+            printf("Invalid gender entered!");
+            return 0;
+        }
+    }
+    else {  
+        // More than 8 hours
+        if (gender == 'M' || gender == 'm') {
+            salary = (8 * 80) + ((hours - 8) * 100);
+        }
+        else if (gender == 'F' || gender == 'f') {
+            salary = (8 * 60) + ((hours - 8) * 100);
+        }
+        else {
+            printf("Invalid gender entered!");
+            return 0;
+        }
+    }
+
+    printf("Total Salary = Rs. %.2f", salary);
+
+    return 0;
+}
