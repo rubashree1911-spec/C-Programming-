@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int symptoms;
+
+    printf("Enter number of symptoms: ");
+
+    // Check if input is numeric
+    if (scanf("%d", &symptoms) != 1) {
+        printf("Invalid input! Please enter a numeric value.");
+        return 0;
+    }
+
+    // Check negative input
+    if (symptoms < 0) {
+        printf("Invalid input! Number of symptoms cannot be negative.");
+    }
+    else if (symptoms >= 5) {
+        printf("Condition: Critical\n");
+        printf("Priority Level: HIGH (Immediate attention required)");
+    }
+    else if (symptoms == 3 || symptoms == 4) {
+        printf("Condition: Moderate\n");
+        printf("Priority Level: MEDIUM (Attention required soon)");
+    }
+    else {  // Less than 3 symptoms
+        printf("Condition: Stable\n");
+        printf("Priority Level: LOW (Can wait for some time)");
+    }
+
+    return 0;
+}
