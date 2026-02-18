@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter your age: ");
+
+    // Check if input is numeric
+    if (scanf("%d", &age) != 1) {
+        printf("Invalid input! Please enter a numeric value.");
+        return 0;
+    }
+
+    // Check for negative age
+    if (age < 0) {
+        printf("Invalid age! Age cannot be negative.");
+    }
+    else if (age <= 5) {
+        printf("Suggested Food: Mashed vegetables or soft fruits.");
+    }
+    else if (age >= 6 && age <= 12) {
+        printf("Suggested Food: Rice, chapati, vegetables, and milk.");
+    }
+    else if (age >= 13 && age <= 18) {
+        printf("Suggested Food: Burgers or pasta.");
+    }
+    else if (age >= 19 && age <= 50) {
+        printf("Suggested Food: Balanced diet with rice, fruits, and proteins.");
+    }
+    else {  // age 51 and above
+        printf("Suggested Food: Soup or grilled fish.");
+    }
+
+    return 0;
+}
