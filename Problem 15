@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int penQty, notebookQty, pencilQty;
+    int totalAmount;
+
+    // Prices
+    int penPrice = 20;
+    int notebookPrice = 70;
+    int pencilPrice = 9;
+
+    // Input
+    printf("Enter quantity of pens: ");
+    scanf("%d", &penQty);
+
+    printf("Enter quantity of notebooks: ");
+    scanf("%d", &notebookQty);
+
+    printf("Enter quantity of pencils: ");
+    scanf("%d", &pencilQty);
+
+    // Calculate total
+    totalAmount = (penQty * penPrice) +
+                  (notebookQty * notebookPrice) +
+                  (pencilQty * pencilPrice);
+
+    // Display total
+    printf("Total Amount: %d units", totalAmount);
+
+    return 0;
+}
