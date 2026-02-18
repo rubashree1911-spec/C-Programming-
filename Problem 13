@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float ticketPrice;
+
+    printf("Enter your age: ");
+
+    // Check if input is numeric
+    if (scanf("%d", &age) != 1) {
+        printf("Invalid input! Please enter a numeric value.");
+        return 0;
+    }
+
+    // Check negative age
+    if (age < 0) {
+        printf("Invalid age! Age cannot be negative.");
+    }
+    else if (age <= 12) {
+        ticketPrice = 100;
+        printf("Category: Children\n");
+        printf("Ticket Price: Rs %.2f", ticketPrice);
+    }
+    else if (age >= 13 && age <= 19) {
+        ticketPrice = 150;
+        printf("Category: Teenager\n");
+        printf("Ticket Price: Rs %.2f", ticketPrice);
+    }
+    else if (age >= 20 && age <= 60) {
+        ticketPrice = 200;
+        printf("Category: Adult\n");
+        printf("Ticket Price: Rs %.2f", ticketPrice);
+    }
+    else {  // 61 and above
+        ticketPrice = 120;
+        printf("Category: Senior\n");
+        printf("Ticket Price: Rs %.2f", ticketPrice);
+    }
+
+    return 0;
+}
