@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    float investment, purchase_price, current_price;
+    int shares;
+    float total_cost, current_value, profit_loss;
+
+    // Input values
+    printf("Enter initial investment amount: ");
+    scanf("%f", &investment);
+
+    printf("Enter stock purchase price per share: ");
+    scanf("%f", &purchase_price);
+
+    printf("Enter current stock price per share: ");
+    scanf("%f", &current_price);
+
+    // Calculate number of shares bought
+    shares = investment / purchase_price;
+
+    // Calculate total cost and current value
+    total_cost = shares * purchase_price;
+    current_value = shares * current_price;
+
+    // Calculate profit or loss
+    profit_loss = current_value - total_cost;
+
+    printf("\nNumber of shares purchased: %d", shares);
+    printf("\nCurrent total value
