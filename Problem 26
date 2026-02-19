@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, product, result;
+
+    printf("Enter first integer: ");
+    scanf("%d", &num1);
+
+    printf("Enter second integer: ");
+    scanf("%d", &num2);
+
+    product = num1 * num2;
+
+    printf("\nProduct = %d", product);
+
+    if (product % 2 == 0) {
+        result = product / 2;
+        printf("\nProduct is even.");
+        printf("\nResult after dividing by 2 = %d", result);
+    }
+    else {
+        result = product / 3;
+        printf("\nProduct is odd.");
+        printf("\nResult after dividing by 3 = %d", result);
+    }
+
+    return 0;
+}
