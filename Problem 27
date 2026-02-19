@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num;
+    int root;
+
+    printf("Enter a positive integer: ");
+
+    // Validate input
+    if (scanf("%d", &num) != 1 || num < 0) {
+        printf("Invalid input! Please enter a positive integer.");
+        return 0;
+    }
+
+    // Find square root
+    root = sqrt(num);
+
+    // Check perfect square
+    if (root * root == num) {
+        printf("%d is a Perfect Square.", num);
+    }
+    else {
+        printf("%d is NOT a Perfect Square.", num);
+    }
+
+    return 0;
+}
