@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float temperature;
+
+    printf("Enter your body temperature in Celsius: ");
+    
+    // Check if input is valid
+    if (scanf("%f", &temperature) != 1) {
+        printf("Invalid input! Please enter a valid number.");
+        return 0;
+    }
+
+    // Fever condition check
+    if (temperature >= 37.0) {
+        printf("Result: You have a fever.");
+    }
+    else {
+        printf("Result: You do not have a fever.");
+    }
+
+    return 0;
+}
