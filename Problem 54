@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float angle, x, y, newX, newY;
+    char direction;
+
+    printf("Enter angle in degrees: ");
+    scanf("%f", &angle);
+
+    printf("Enter direction (C for Clockwise, A for Counterclockwise): ");
+    scanf(" %c", &direction);
+
+    printf("Enter initial x coordinate: ");
+    scanf("%f", &x);
+
+    printf("Enter initial y coordinate: ");
+    scanf("%f", &y);
+
+    // Convert degree to radian
+    float rad = angle * (3.14159 / 180);
+
+    if(direction == 'C' || direction == 'c')
+        rad = -rad;   // clockwise = negative angle
+
+    newX = x * cos(rad) - y * sin(rad);
+    newY = x * sin(rad) + y * cos(rad);
+
+    printf("New Coordinates: (%.2f, %.2f)\n", newX, newY);
+
+    return 0;
+}
